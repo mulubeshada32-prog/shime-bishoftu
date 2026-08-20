@@ -379,11 +379,7 @@ export const omTranslations: TranslationSchema = {
     time: "Sa'aa",
     location: 'Iddoo',
     organizer: 'Qindeessaa',
-    agenda: 'Sagantaa',
-    speakers: 'Afferamtoota',
     partners: 'Michoota',
-    gallery: 'Kuusaa Suuraa',
-    faqs: "Gaaffilee Yeroo Baay'ee Gaafataman",
     register: "Galmaa'i",
     hero: {
       breadcrumbHome: 'Mana',

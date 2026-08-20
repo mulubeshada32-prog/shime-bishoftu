@@ -344,11 +344,7 @@ export interface TranslationSchema {
     time: string
     location: string
     organizer: string
-    agenda: string
-    speakers: string
     partners: string
-    gallery: string
-    faqs: string
     register: string
     hero: {
       breadcrumbHome: string

@@ -1,16 +1,29 @@
+import type { LocalizedText } from '@/i18n/types'
+import type { EventLogistics as EventLogisticsType } from '@/types/event'
 import { Container } from '@ui/Container'
 import { SectionHeading } from '@ui/SectionHeading'
 import { Separator } from '@ui/Separator'
-import { useLanguage } from '../../i18n/LanguageProvider'
 import { getLocalizedText } from '../../i18n'
-import type { EventLogistics as EventLogisticsType } from '@/types/event'
+import { useLanguage } from '../../i18n/LanguageProvider'
 
 interface EventLogisticsProps {
-  logistics: EventLogisticsType[]
+  logistics: EventLogisticsType[] | LocalizedText
 }
 
 export function EventLogistics({ logistics }: EventLogisticsProps) {
   const { t, locale } = useLanguage()
+  const items = Array.isArray(logistics)
+    ? logistics
+    : [
+        {
+          id: 'logistics',
+          label: {
+            en: t.eventDetails.logistics.title,
+            om: t.eventDetails.logistics.title,
+          },
+          value: logistics,
+        },
+      ]
 
   return (
     <section className="py-16 md:py-24">
@@ -22,7 +35,7 @@ export function EventLogistics({ logistics }: EventLogisticsProps) {
           className="mb-12"
         />
         <div className="mx-auto max-w-3xl">
-          {logistics.map((item, index) => (
+          {items.map((item, index) => (
             <div key={item.id}>
               {index > 0 && <Separator className="my-6" />}
               <div className="flex flex-col gap-2">

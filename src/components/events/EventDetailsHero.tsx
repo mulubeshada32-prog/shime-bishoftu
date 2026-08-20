@@ -1,10 +1,10 @@
+import { mediaConfig } from '@/data/media'
 import type { Event } from '@/types/event'
 import { Badge } from '@ui/Badge'
 import { Container } from '@ui/Container'
 import { Link } from 'react-router-dom'
 import { getLocalizedText } from '../../i18n'
 import { useLanguage } from '../../i18n/LanguageProvider'
-import { mediaConfig } from '@/data/media'
 
 interface EventDetailsHeroProps {
   event: Event
@@ -31,7 +31,6 @@ export function EventDetailsHero({ event }: EventDetailsHeroProps) {
           className="h-full w-full object-cover object-center"
           poster={mediaConfig.heroVideo.posterImageOptimized}
         >
-          <source src={mediaConfig.heroVideo.videoUrl} type="video/mp4" />
           <img
             src={mediaConfig.heroVideo.posterImageOptimized}
             alt=""

@@ -45,6 +45,6 @@ export const siteInformation: SiteInformation = {
     },
   ],
   developerName: 'BAM Eagle Corps',
-  developerUrl: 'https://example.com',
+  developerUrl: '#',
   siteUrl: import.meta.env.VITE_SITE_URL || 'https://example.com',
 }

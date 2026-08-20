@@ -89,7 +89,7 @@ export interface Event {
   host?: LocalizedText
   speakers?: EventSpeaker[]
   agenda?: EventAgendaItem[]
-  logistics?: EventLogistics[]
+  logistics?: EventLogistics[] | LocalizedText
   faqs?: EventFAQ[]
   partners?: EventPartner[]
   gallery?: EventGallery[]

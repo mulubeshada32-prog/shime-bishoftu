@@ -1950,6 +1950,7 @@ export const events: Event[] = [
         },
       },
     ],
+    /*
     id: '9',
     slug: 'bishoftu-health-and-wellness-fair-2026',
     title: {
@@ -2179,6 +2180,7 @@ export const events: Event[] = [
         },
       },
     ],
+    */
   },
   {
     id: '10',

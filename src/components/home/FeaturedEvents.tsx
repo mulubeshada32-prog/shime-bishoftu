@@ -1,23 +1,11 @@
-import { Link } from 'react-router-dom'
+import { getLocalizedText } from '@/i18n'
+import { useLanguage } from '@/i18n/LanguageProvider'
+import { events } from '@data/events'
+import { Badge } from '@ui/Badge'
 import { Container } from '@ui/Container'
 import { SectionHeading } from '@ui/SectionHeading'
-import { Badge } from '@ui/Badge'
 import { Separator } from '@ui/Separator'
-import { events } from '@data/events'
-import { useLanguage } from '@/i18n/LanguageProvider'
-import { getLocalizedText } from '@/i18n'
-import type { EventCategory } from '@/types/event'
-
-const categoryTranslationKeys: Record<EventCategory, string> = {
-  ceremony: 'ceremony',
-  hospitality: 'hospitality',
-  development: 'development',
-  tourism: 'tourism',
-  government: 'government',
-  community: 'community',
-  charity: 'charity',
-  other: 'other',
-}
+import { Link } from 'react-router-dom'
 
 function formatEventDate(dateString: string, locale: string) {
   const date = new Date(dateString)
@@ -89,11 +77,7 @@ export function FeaturedEvents() {
                   </time>
                   <span className="text-muted-foreground">•</span>
                   <Badge variant="outline">
-                    {t.events[
-                      categoryTranslationKeys[
-                        event.category
-                      ] as keyof typeof t.events
-                    ] || event.category}
+                    {t.events.categories[event.category] || event.category}
                   </Badge>
                 </div>
                 <h3 className="mb-3 font-display text-2xl font-medium text-foreground">

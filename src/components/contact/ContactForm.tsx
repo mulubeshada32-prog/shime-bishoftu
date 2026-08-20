@@ -1,7 +1,7 @@
 import { Button } from '@ui/Button'
 import { Container } from '@ui/Container'
 import { SectionHeading } from '@ui/SectionHeading'
-import { useRef, useState, type FormEvent } from 'react'
+import { useState, type FormEvent } from 'react'
 import { useLanguage } from '../../i18n/LanguageProvider'
 
 interface FormData {
@@ -31,12 +31,8 @@ export function ContactForm() {
     eventType: '',
     message: '',
   })
-  const [errors, setErrors] = useState<FormErrors>({})
+  const [, setErrors] = useState<FormErrors>({})
   const [status, setStatus] = useState<FormStatus>('idle')
-  const firstInvalidRef = useRef<HTMLInputElement | HTMLTextAreaElement | null>(
-    null
-  )
-
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {}
 
@@ -88,24 +84,6 @@ export function ContactForm() {
     })
     setErrors({})
     setStatus('idle')
-  }
-
-  const handleChange = (
-    event: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { name, value } = event.target
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }))
-    if (errors[name as keyof FormErrors]) {
-      setErrors((prevErrors) => ({
-        ...prevErrors,
-        [name]: undefined,
-      }))
-    }
   }
 
   if (status === 'success') {

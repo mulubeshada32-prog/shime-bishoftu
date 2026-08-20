@@ -46,7 +46,6 @@ export function Navbar() {
                       : 'text-foreground hover:text-accent'
                   )
                 }
-                aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
               >
                 {
                   t.navigation[

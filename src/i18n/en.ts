@@ -374,11 +374,7 @@ export const enTranslations: TranslationSchema = {
     time: 'Time',
     location: 'Location',
     organizer: 'Organizer',
-    agenda: 'Agenda',
-    speakers: 'Speakers',
     partners: 'Partners',
-    gallery: 'Gallery',
-    faqs: 'FAQs',
     register: 'Register',
     hero: {
       breadcrumbHome: 'Home',

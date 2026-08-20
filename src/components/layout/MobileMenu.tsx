@@ -1,12 +1,12 @@
+import { LanguageToggle } from '@common/LanguageToggle'
+import { Logo } from '@common/Logo'
+import { ThemeToggle } from '@common/ThemeToggle'
+import { mainNavigation } from '@data/navigation'
+import { cn } from '@lib/utils'
+import { Separator } from '@ui/Separator'
+import { X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { X } from 'lucide-react'
-import { cn } from '@lib/utils'
-import { mainNavigation } from '@data/navigation'
-import { Logo } from '@common/Logo'
-import { LanguageToggle } from '@common/LanguageToggle'
-import { ThemeToggle } from '@common/ThemeToggle'
-import { Separator } from '@ui/Separator'
 import { useLanguage } from '../../i18n/LanguageProvider'
 
 interface MobileMenuProps {
@@ -133,7 +133,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               style={{
                 transitionDelay: isOpen ? `${index * 50 + 100}ms` : '0ms',
               }}
-              aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
             >
               {
                 t.navigation[

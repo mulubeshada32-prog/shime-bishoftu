@@ -64,7 +64,7 @@ export default function EventDetailsPage() {
 
       <EventVenue event={event} />
 
-      {event.logistics && event.logistics.length > 0 && (
+      {Array.isArray(event.logistics) && event.logistics.length > 0 && (
         <EventLogistics logistics={event.logistics} />
       )}
 
