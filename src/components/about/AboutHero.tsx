@@ -1,8 +1,7 @@
-import { mediaConfig } from '@data/media'
+import aboutHero from '@/assets/about-hero.png'
 import { Container } from '@ui/Container'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../i18n/LanguageProvider'
-import aboutHero from '@/assets/about-hero.png'
 
 export function AboutHero() {
   const { t } = useLanguage()

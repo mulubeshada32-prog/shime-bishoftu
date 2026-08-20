@@ -1,11 +1,10 @@
-import { mediaConfig } from '@/data/media'
+import eventsDetailHero from '@/assets/events-detail-hero.png'
 import type { Event } from '@/types/event'
 import { Badge } from '@ui/Badge'
 import { Container } from '@ui/Container'
 import { Link } from 'react-router-dom'
 import { getLocalizedText } from '../../i18n'
 import { useLanguage } from '../../i18n/LanguageProvider'
-import eventsDetailHero from '@/assets/events-detail-hero.png'
 
 interface EventDetailsHeroProps {
   event: Event
