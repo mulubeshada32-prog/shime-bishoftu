@@ -12,10 +12,13 @@ import {
   FaLinkedin,
   FaMapMarkerAlt,
   FaPhone,
+  FaSlack,
+  FaTelegram,
   FaTiktok,
   FaTwitter,
   FaYoutube,
 } from 'react-icons/fa'
+import { FaWhatsapp, FaX } from 'react-icons/fa6'
 import { FiGlobe } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../i18n/LanguageProvider'
@@ -26,8 +29,12 @@ const socialIconMap: Record<string, React.ElementType> = {
   instagram: FaInstagram,
   twitter: FaTwitter,
   youtube: FaYoutube,
-  linkedin: FaLinkedin,
+  linkedIn: FaLinkedin,
   tiktok: FaTiktok,
+  X: FaX,
+  slack: FaSlack,
+  telegram: FaTelegram,
+  whatsapp: FaWhatsapp,
 }
 
 function SocialLinks() {

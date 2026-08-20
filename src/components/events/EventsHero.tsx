@@ -1,4 +1,4 @@
-import { mediaConfig } from '@data/media'
+import eventsHero from '@/assets/events-hero.png'
 import { Container } from '@ui/Container'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../i18n/LanguageProvider'
@@ -15,10 +15,10 @@ export function EventsHero() {
           loop
           playsInline
           className="h-full w-full object-cover object-center"
-          poster={mediaConfig.heroVideo.posterImageOptimized}
+          poster={eventsHero}
         >
           <img
-            src={mediaConfig.heroVideo.posterImageOptimized}
+            src={eventsHero}
             alt=""
             className="h-full w-full object-cover object-center"
           />

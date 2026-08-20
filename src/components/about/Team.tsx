@@ -1,8 +1,8 @@
+import { teamMembers } from '@data/team'
 import { Container } from '@ui/Container'
 import { SectionHeading } from '@ui/SectionHeading'
-import { teamMembers } from '@data/team'
-import { useLanguage } from '../../i18n/LanguageProvider'
 import { getLocalizedText } from '../../i18n'
+import { useLanguage } from '../../i18n/LanguageProvider'
 
 export function Team() {
   const { t, locale } = useLanguage()

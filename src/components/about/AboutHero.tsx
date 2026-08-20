@@ -2,6 +2,7 @@ import { mediaConfig } from '@data/media'
 import { Container } from '@ui/Container'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../../i18n/LanguageProvider'
+import aboutHero from '@/assets/about-hero.png'
 
 export function AboutHero() {
   const { t } = useLanguage()
@@ -15,10 +16,10 @@ export function AboutHero() {
           loop
           playsInline
           className="h-full w-full object-cover object-center"
-          poster={mediaConfig.heroVideo.posterImageOptimized}
+          poster={aboutHero}
         >
           <img
-            src={mediaConfig.heroVideo.posterImageOptimized}
+            src={aboutHero}
             alt=""
             className="h-full w-full object-cover object-center"
           />

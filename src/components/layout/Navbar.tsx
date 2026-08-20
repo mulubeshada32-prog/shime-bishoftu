@@ -27,7 +27,7 @@ export function Navbar() {
           aria-label="Main navigation"
         >
           <div className="flex items-center gap-2 sm:gap-4">
-            <Logo showText={false} className="md:mr-4 md:hidden" />
+            <Logo showText={true} className="md:mr-4 md:hidden" />
             <Logo showText={true} className="hidden md:flex" />
           </div>
 

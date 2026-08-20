@@ -50,7 +50,7 @@ export const socialMediaCards: SocialMediaCard[] = [
       en: 'Stay updated with our latest news and events',
       om: 'Oduu fi taatee haaraa keenya hordofaa',
     },
-    pageUrl: 'https://facebook.com/bishoftuevents',
+    pageUrl: 'https://web.facebook.com/shemles.sermu',
     followers: '25K+',
   },
   {
@@ -70,7 +70,7 @@ export const socialMediaCards: SocialMediaCard[] = [
       en: 'See our latest photos and event moments',
       om: 'Suuraa fi yeroo taatee keenya haaraa ilaali',
     },
-    pageUrl: 'https://instagram.com/bishoftuevents',
+    pageUrl: '',
     followers: '15K+',
   },
 ]

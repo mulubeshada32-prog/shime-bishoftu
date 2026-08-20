@@ -1,3 +1,5 @@
+import Image1 from '@/assets/1.png'
+import Image2 from '@/assets/2.png'
 import type { LocalizedText } from '../i18n/types'
 
 export interface TeamMember {
@@ -16,7 +18,7 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     id: '1',
-    name: 'Shimellis Gelan',
+    name: 'Shimellis Hinsermu Gelan',
     role: {
       en: 'Founder & CEO',
       om: 'Hundeessaa fi Daareektara Olaanaa',
@@ -44,8 +46,7 @@ export const teamMembers: TeamMember[] = [
       en: 'Expert in planning and executing large-scale events.',
       om: 'Ogeessa karoora fi raawwii taatee gurguddaa.',
     },
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR165RbM8tt-ehhrF6f9RWNH9ODLL5pdSIqxQ&s',
+    image: Image1,
     socialLinks: {
       linkedin: 'https://linkedin.com',
       email: 'shimelis@bishoftuevents.com',
@@ -62,8 +63,7 @@ export const teamMembers: TeamMember[] = [
       en: 'Specialist in event promotion and audience engagement.',
       om: 'Ogeessa dhiheessa taatee fi walqunnamtii dhaggeeffattoota.',
     },
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEZGRJ52brdlZJ_5iAC6hugt6Q49V1UwSdRQ&s',
+    image: Image2,
     socialLinks: {
       twitter: 'https://twitter.com',
       email: 'shimelis@bishoftuevents.com',

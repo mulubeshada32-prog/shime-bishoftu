@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom'
+import contactHero from '@/assets/contact-hero.png'
 import { Container } from '@ui/Container'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../../i18n/LanguageProvider'
-import { mediaConfig } from '@data/media'
 
 export function ContactHero() {
   const { t } = useLanguage()
@@ -15,13 +15,11 @@ export function ContactHero() {
           loop
           playsInline
           className="h-full w-full object-cover object-center"
-          poster={mediaConfig.heroVideo.posterImageOptimized}
+          poster={contactHero}
         >
-          <source
-            src={`https://www.youtube.com/watch?v=${mediaConfig.heroVideo.youtubeId}`}
-          />
+          <source src={contactHero} />
           <img
-            src={mediaConfig.heroVideo.posterImageOptimized}
+            src={contactHero}
             alt=""
             className="h-full w-full object-cover object-center"
           />

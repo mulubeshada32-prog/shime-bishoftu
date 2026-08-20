@@ -5,6 +5,7 @@ import { Container } from '@ui/Container'
 import { Link } from 'react-router-dom'
 import { getLocalizedText } from '../../i18n'
 import { useLanguage } from '../../i18n/LanguageProvider'
+import eventsDetailHero from '@/assets/events-detail-hero.png'
 
 interface EventDetailsHeroProps {
   event: Event
@@ -29,10 +30,10 @@ export function EventDetailsHero({ event }: EventDetailsHeroProps) {
           loop
           playsInline
           className="h-full w-full object-cover object-center"
-          poster={mediaConfig.heroVideo.posterImageOptimized}
+          poster={eventsDetailHero}
         >
           <img
-            src={mediaConfig.heroVideo.posterImageOptimized}
+            src={eventsDetailHero}
             alt=""
             className="h-full w-full object-cover object-center"
           />

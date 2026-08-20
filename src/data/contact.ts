@@ -23,8 +23,8 @@ export interface ContactInformation {
 }
 
 export const contactInformation: ContactInformation = {
-  phone: '+251 900 000 000',
-  email: 'info@bishoftuevents.com',
+  phone: '+251 911 391 625',
+  email: 'shimallisinsarmu@gmail.com',
   address: 'Bishoftu',
   city: 'Bishoftu',
   region: 'Oromia',
