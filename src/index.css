@@ -1,0 +1,331 @@
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/500.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/cormorant-garamond/700.css';
+@import '@fontsource/manrope/400.css';
+@import '@fontsource/manrope/500.css';
+@import '@fontsource/manrope/600.css';
+@import '@fontsource/manrope/700.css';
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', system-ui, -apple-system, sans-serif;
+
+  --color-background: #faf9f6;
+  --color-foreground: #1a1a1a;
+  --color-primary: #1f3d2b;
+  --color-primary-foreground: #faf9f6;
+  --color-secondary: #e8e5df;
+  --color-secondary-foreground: #1a1a1a;
+  --color-muted: #f0eee9;
+  --color-muted-foreground: #6b6b6b;
+  --color-accent: #c4a050;
+  --color-accent-foreground: #1a1a1a;
+  --color-border: #e0ddd6;
+  --color-input: #e0ddd6;
+  --color-ring: #c4a050;
+
+  --color-background-dark: #111110;
+  --color-foreground-dark: #f0ede6;
+  --color-primary-dark: #4a7a59;
+  --color-primary-foreground-dark: #111110;
+  --color-secondary-dark: #1c1c1a;
+  --color-secondary-foreground-dark: #f0ede6;
+  --color-muted-dark: #1a1a18;
+  --color-muted-foreground-dark: #8a8a8a;
+  --color-accent-dark: #d4b266;
+  --color-accent-foreground-dark: #111110;
+  --color-border-dark: #2a2a28;
+  --color-input-dark: #2a2a28;
+  --color-ring-dark: #d4b266;
+
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 9999px;
+}
+
+.dark {
+  --color-background: var(--color-background-dark);
+  --color-foreground: var(--color-foreground-dark);
+  --color-primary: var(--color-primary-dark);
+  --color-primary-foreground: var(--color-primary-foreground-dark);
+  --color-secondary: var(--color-secondary-dark);
+  --color-secondary-foreground: var(--color-secondary-foreground-dark);
+  --color-muted: var(--color-muted-dark);
+  --color-muted-foreground: var(--color-muted-foreground-dark);
+  --color-accent: var(--color-accent-dark);
+  --color-accent-foreground: var(--color-accent-foreground-dark);
+  --color-border: var(--color-border-dark);
+  --color-input: var(--color-input-dark);
+  --color-ring: var(--color-ring-dark);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    overflow-wrap: break-word;
+  }
+}
+
+@layer utilities {
+  .duration-fast {
+    transition-duration: 150ms;
+  }
+
+  .duration-normal {
+    transition-duration: 250ms;
+  }
+
+  .duration-slow {
+    transition-duration: 450ms;
+  }
+
+  .material-symbols-rounded {
+    font-family: 'Material Symbols Rounded';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Motion utilities */
+  .motion-safe {
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .motion-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+  }
+
+  .motion-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .motion-reveal-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+  }
+
+  .motion-reveal-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .motion-reveal-right {
+    opacity: 0;
+    transform: translateX(20px);
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+  }
+
+  .motion-reveal-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .motion-fade {
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+  }
+
+  .motion-fade.is-visible {
+    opacity: 1;
+  }
+
+  .motion-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition-property: opacity, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+  }
+
+  .motion-scale.is-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Page transition */
+.page-enter {
+  animation: pageEnter 400ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero entrance animations */
+.hero-enter-eyebrow {
+  animation: heroEnter 500ms cubic-bezier(0.4, 0, 0.2, 1) 100ms forwards;
+  opacity: 0;
+}
+
+.hero-enter-heading {
+  animation: heroEnter 600ms cubic-bezier(0.4, 0, 0.2, 1) 200ms forwards;
+  opacity: 0;
+}
+
+.hero-enter-description {
+  animation: heroEnter 600ms cubic-bezier(0.4, 0, 0.2, 1) 300ms forwards;
+  opacity: 0;
+}
+
+.hero-enter-cta {
+  animation: heroEnter 600ms cubic-bezier(0.4, 0, 0.2, 1) 400ms forwards;
+  opacity: 0;
+}
+
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects */
+.hover-lift {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.hover-scale {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-arrow {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.group:hover .hover-arrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .motion-reveal,
+  .motion-reveal-left,
+  .motion-reveal-right,
+  .motion-fade,
+  .motion-scale {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-enter-eyebrow,
+  .hero-enter-heading,
+  .hero-enter-description,
+  .hero-enter-cta {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .hover-lift:hover,
+  .hover-scale:hover {
+    transform: none !important;
+  }
+
+  .hover-arrow {
+    transform: none !important;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
